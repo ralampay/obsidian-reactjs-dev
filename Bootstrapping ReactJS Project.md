@@ -15,11 +15,31 @@ Setup the top level directories:
 * `js`: Javascript source code
 * `styles`: CSS source code
 
+We then need to install the relevant packages:
+
+```bash
+npm install \
+	autoprefixer \
+	axios \
+	bootstrap \
+	bootstrap-icons \
+	dotenv \
+	esbuild \
+	esbuild-envfile-plugin \
+	esbuild-sass-plugin \
+	jwt-decode \
+	postcss \
+	react \
+	react-bootstrap \
+	react-dom \
+	react-router-dom \
+	sass
+```
 ## Build Script
 
 We'll create a `build.js` file with the following contents:
 
-### Important Libraries
+### Import Libraries
 
 ```js
 import esbuild from 'esbuild';
@@ -93,5 +113,49 @@ let commonSettings = {
     }),             
     watchPlugin
   ],
+}
+```
+
+### Build Process
+
+```js
+let debugSettings = {}
+let productionSettings = {}
+
+if(watch ||  dev) {
+  // override settings here for debugSettings
+  debugSettings = {
+    ...commonSettings,
+    logLevel: "debug",
+    sourcemap: "linked"
+  }
+
+  let debugMode = await esbuild.context(debugSettings)
+  console.log("Watching for changes...");
+
+  // watch and dev
+  if (watch) {
+    console.log("Watching for changes...");
+    debugMode.watch();
+  }
+
+  if(dev) {
+    console.log("Debug Mode with" , debugSettings);
+    debugMode.serve({
+      servedir: 'public',
+      port: port
+    });
+  }
+} else {
+  productionSettings = {
+    ...commonSettings,
+    // add settings for production.
+  }
+  console.log("Building with" , productionSettings);
+  esbuild.build(productionSettings).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+  console.log("Deployment build completed.");
 }
 ```
