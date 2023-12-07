@@ -159,3 +159,31 @@ if(watch ||  dev) {
   console.log("Deployment build completed.");
 }
 ```
+
+## Setup Single Page Container
+
+In the file `src/index.html`, we'd have the following:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        Envelop
+    </title>
+    <script src="./assets/index.js" async defer></script>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+  </head>
+  <body id="bootstrap-overrides">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+This assumes the following:
+* Main js bundle is found in`./assets/index.js`
+* Main css bundle is found in `./assets/styles/index.css`
+* Our main reactjs container is in `div` with id `root`
