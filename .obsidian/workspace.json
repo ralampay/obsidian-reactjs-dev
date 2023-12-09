@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bootstrapping ReactJS Project.md",
+                "file": "Integrating Bootstrap CSS Framework (SASS).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "32c40e5bc0e27192",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d5e0ac956d432c2f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Integrating Bootstrap CSS Framework (SASS).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bootstrapping ReactJS Project.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bootstrapping ReactJS Project.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bootstrapping ReactJS Project.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,8 +171,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "181e5ea1d53dfd7e",
+  "active": "32c40e5bc0e27192",
   "lastOpenFiles": [
+    "Integrating Bootstrap CSS Framework (SASS).md",
+    "README.md",
     "Bootstrapping ReactJS Project.md",
     "Untitled.canvas"
   ]
