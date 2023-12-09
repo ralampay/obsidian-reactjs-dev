@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cf8a1d20b8338435",
+        "id": "6e530f0e486bea17",
         "type": "tabs",
         "children": [
           {
-            "id": "957cfd565a7082c6",
+            "id": "181e5ea1d53dfd7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,9 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "957cfd565a7082c6",
+  "active": "181e5ea1d53dfd7e",
   "lastOpenFiles": [
-    "Untitled.canvas",
-    "Bootstrapping ReactJS Project.md"
+    "Bootstrapping ReactJS Project.md",
+    "Untitled.canvas"
   ]
 }
